@@ -1,0 +1,9 @@
+.footer{
+    min-height: 70px;
+    @include adaptive-value("padding-top", 10, 5, 1);
+    @include adaptive-value("padding-bottom", 10, 5, 1);
+    @include adaptive-value("padding-left", 10, 5, 1);
+    @include adaptive-value("padding-right", 10, 5, 1);
+    background-color: var(--color-background-nav);
+    color: var(--color-white);
+}

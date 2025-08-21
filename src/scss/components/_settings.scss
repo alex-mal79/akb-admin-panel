@@ -9,15 +9,30 @@ body {
 }
 
 html {
-    font-family: var(--font-family, sans-serif);
+    font-family: var(--font-montserrat, sans-serif);
 }
 
 body {
+    display: flex;
+    flex-direction: row;
     min-width: 320px;
     font-size: 16px;
 }
 
+.aside{
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    min-height: 100%;
+    overflow: hidden;
+    @include adaptive-value("padding-left", 10, 5, 1);
+    @include adaptive-value("padding-right", 10, 5, 1);
+    background-color: var(--color-background-nav);
+    color: var(--color-white);
+}
+
 .wrapper{
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -27,6 +42,11 @@ body {
 .main{
     flex: 1 1 auto;
     width: 100%;
+    @include adaptive-value("padding-top", 10, 5, 1);
+    @include adaptive-value("padding-bottom", 10, 5, 1);
+    @include adaptive-value("padding-left", 10, 5, 1);
+    @include adaptive-value("padding-right", 10, 5, 1);
+    background-color: var(--color-background-main);
 }
 //=======================================================
 //      Ограничивающий контейнер

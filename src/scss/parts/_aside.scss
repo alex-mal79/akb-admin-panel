@@ -1,0 +1,19 @@
+.aside-header {
+    min-height: 50px;
+    @include adaptive-value("padding-top", 10, 5, 1);
+    @include adaptive-value("padding-bottom", 10, 5, 1);
+    color: var(--color-white);
+}
+.aside-main {
+    flex: 1 1 auto;
+    @include adaptive-value("padding-top", 10, 5, 1);
+    @include adaptive-value("padding-bottom", 10, 5, 1);
+}
+.aside-nav{
+    color: var(--color-white);
+}
+.aside-footer {
+    min-height: 70px;
+    @include adaptive-value("padding-top", 10, 5, 1);
+    @include adaptive-value("padding-bottom", 10, 5, 1);
+}
