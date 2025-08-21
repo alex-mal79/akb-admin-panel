@@ -1,0 +1,31 @@
+{
+    "Меню": {
+        "prefix": "s-menu",
+        "body": ["<div class=\"header__menu menu\">",
+                        "\t<button type=\"button\" class=\"menu__icon icon-menu btn-reset\" data-icon-menu>",
+                            "\t\t<span></span>",
+                            "\t\t<span></span>",
+                            "\t\t<span></span>",
+                        "\t</button>",
+                        "\t<nav class=\"menu__body\" data-menu-body>",
+                            "\t\t<ul class=\"menu__list\">",
+                                "\t\t\t<li class=\"menu__item\">",
+                                    "\t\t\t\t<a href=\"\" class=\"menu__link\"></a>",
+                                "\t\t\t</li>",
+                            "\t\t</ul>",
+                        "\t</nav>",
+                    "</div>"],
+        "description": "Меню бургер"
+    },
+    "Изображения": {
+        "prefix": "s-picture",
+        "body": [
+          "<picture>",
+          "  <source srcset=\"$1.avif\" type=\"image/avif\">",
+          "  <source srcset=\"$1.webp\" type=\"image/webp\">",
+          "  <img loading=\"lazy\" src=\"$1.$2\" alt=\"$3\">",
+          "</picture>"
+        ],
+        "description": "Snippet for basic image structure"
+      }
+}
