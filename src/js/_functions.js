@@ -24,3 +24,9 @@ isWebp();
 // import { isAvif } from "./functions/isAvif.js";
 // isAvif();
 // =================================================
+// Создание файла конфигурациии .rsc MikroTik для добавления / удаления
+// MAC-адресов access-list
+// =================================================
+ import { macToAccessList } from "./functions/macToAccessList.js";
+ macToAccessList();
+// =================================================

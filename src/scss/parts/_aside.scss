@@ -1,7 +1,10 @@
 .aside-header {
+    display: flex;
+    align-items: center;
     min-height: 50px;
     @include adaptive-value("padding-top", 10, 5, 1);
     @include adaptive-value("padding-bottom", 10, 5, 1);
+    font-size: 14px;
     color: var(--color-white);
 }
 .aside-main {
