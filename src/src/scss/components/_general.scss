@@ -1,0 +1,12 @@
+.aside{
+    &__header, &__main, &__footer {
+        @include adaptive-value("padding-top", 10, 5, 1);
+        @include adaptive-value("padding-bottom", 10, 5, 1);
+    }
+}
+.header, .main, .footer{
+    @include adaptive-value("padding-top", 10, 5, 1);
+    @include adaptive-value("padding-bottom", 10, 5, 1);
+    @include adaptive-value("padding-left", 10, 5, 1);
+    @include adaptive-value("padding-right", 10, 5, 1);
+}
