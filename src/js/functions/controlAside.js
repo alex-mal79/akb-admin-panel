@@ -9,9 +9,9 @@ export const controlAside = () => {
             let currentButton = e.currentTarget;
             let currentButtonParent = currentButton.closest('[data-aside]');
             if(currentButtonParent){
-                currentButtonParent.classList.toggle('minimize');
-                pageWrapper.classList.toggle('extensive');
-                setTimeout(() => { currentButtonParent.classList.toggle('hover'); }, 100);
+                currentButtonParent.classList.toggle('aside--minimize');
+                pageWrapper.classList.toggle('aside--extensive');
+                setTimeout(() => { currentButtonParent.classList.toggle('aside--hover'); }, 100);
             }
         });
 
