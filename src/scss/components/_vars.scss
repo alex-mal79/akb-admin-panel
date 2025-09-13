@@ -1,0 +1,36 @@
+// Размеры контейнера
+$maxWidth: 1366px; //Размер макета
+$widthContainer: 1200px; //Размер блока контента
+$containerOffset: 10px; //Отступ безопасности
+$maxWidthContainer: calc($widthContainer + $containerOffset * 2); //Размер котейнера
+
+// Break point
+$md1: $maxWidthContainer + $containerOffset;
+$md2: 992px;
+$md3: 768px;
+$md4: 480px;
+
+// Переменные CSS
+:root {
+    // Базовые настройки
+    --max-widthContainer: #{$maxWidthContainer};
+    --container-offset: #{$containerOffset};
+
+    //Размеры блоков
+    --size-header-min-height: 50px;
+    --size-footer-min-height: 40px;
+
+    //Шрифты
+    --font-montserrat: 'Montserrat', sans-serif;
+
+    // Цветовая схема
+    --color-black: #000;
+    --color-white: #fff;
+    --color-background-nav: #0c1117;
+    --color-background-main: #e9e9e9;
+    --color-background-blok: #f3f3f3;
+    --color-border: #dfdfdf;
+    --color-font-nav: #c6c6c6;
+    --color-font-hover: #f9f9f9;
+    --color-dodger: #377dff;
+  }

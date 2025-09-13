@@ -1,0 +1,17 @@
+// базовые подключения
+@import "components/reset";
+@import "components/fonts";
+@import "components/icon";
+@import "components/vars";
+@import "components/mixins";
+@import "components/settings";
+@import "components/general";
+
+// подключения компонентов страницы
+@import "./parts/aside";
+@import "./parts/header";
+@import "./parts/footer";
+@import "./parts/popup";
+
+// подключения страниц
+

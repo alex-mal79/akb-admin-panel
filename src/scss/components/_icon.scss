@@ -1,0 +1,51 @@
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-help:before {
+  content: "\e90b";
+}
+.icon-kick-out:before {
+  content: "\e90a";
+}
+.icon-shop:before {
+  content: "\e906";
+}
+.icon-office-business:before {
+  content: "\e907";
+}
+.icon-settings:before {
+  content: "\e903";
+}
+.icon-setting:before {
+  content: "\e904";
+}
+.icon-office:before {
+  content: "\e905";
+}
+.icon-warehouse:before {
+  content: "\e908";
+}
+.icon-arrow-bottom:before {
+  content: "\e909";
+}
+.icon-arrow-up:before {
+  content: "\e901";
+}
+.icon-arrow-right:before {
+  content: "\e902";
+}
+.icon-arrow-left:before {
+  content: "\e900";
+}

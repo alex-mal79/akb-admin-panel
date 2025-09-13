@@ -1,0 +1,29 @@
+// .aside
+.aside {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    min-height: 100%;
+    @include adaptive-value("padding", 10, 5, 1);
+    background-color: var(--color-background-nav);
+    color: var(--color-font-nav);
+		// .aside__header
+		&__header {
+            display: flex;
+            align-items: center;
+            min-height: var(--size-header-min-height);
+            padding-bottom: 5px;
+		}
+		// .aside__main
+		&__main {
+            flex: 1 1 auto;
+            padding: 5px 0px;
+		}
+		// .aside__footer
+		&__footer {
+            display: flex;
+            align-items: center;
+            min-height: var(--size-footer-min-height);
+            padding-top: 5px;
+		}
+}
