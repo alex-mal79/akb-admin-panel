@@ -24,3 +24,9 @@ burger();
 // import { isAvif } from "./functions/isAvif.js";
 // isAvif();
 // =================================================
+// Создание файла конфигурациии .rsc MikroTik для добавления / удаления
+// MAC-адресов access-list
+// =================================================
+ import { controlAside } from "./functions/controlAside.js";
+ controlAside();
+// =================================================

@@ -7,6 +7,19 @@
     @include adaptive-value("padding", 10, 5, 1);
     background-color: var(--color-background-nav);
     color: var(--color-font-nav);
+    transition: all 0.3s ease 0s;
+    &.aside--hide{
+        transform: translateX(-500px);
+        position: absolute;
+        min-height: calc(100% - var(--size-header-min-height));
+        top: var(--size-header-min-height);
+    }
+    &.burger--active{
+        transform: translateX(0px);
+        width: 280px;
+        padding: 10px;
+        position: absolute;
+    }
 		// .aside__header
 		&__header {
             display: flex;
