@@ -1,0 +1,37 @@
+// .link-nav
+.link-nav {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    @media(any-hover: hover){
+            &:hover{
+                .link-nav__icon{
+                    color: var(--color-dodger);
+                }
+                .link-nav__text{
+                    color: var(--color-white);
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    // .link-nav__icon
+    &__icon {
+    }
+    // .link-nav__text
+    &__text {
+        position: relative;
+        transition: all 0.3s ease 0;
+        &::after{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -3px;
+            height: 1px;
+            width: 0;
+            background-color: var(--color-dodger);
+            transition: width 0.3s ease 0s;
+        }
+    }
+}
