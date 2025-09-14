@@ -18,13 +18,26 @@ export const controlAside = () => {
 
     if(btnNavResize){
         btnNavResize.addEventListener("click", function(e){
-            pageContant.classList.toggle('aside--extensive');
-            aside.classList.toggle('aside--minimize');
-            setTimeout(() => { aside.classList.toggle('aside--hover'); }, 100);
+            asideMinimize();
         });
     }
 
-    const hideAside = () =>{
+    const asideMinimize = () => {
+        if(pageContant.classList.contains('aside--extensive')){
+            pageContant.classList.remove('aside--extensive');
+            aside.classList.remove('aside--minimize');
+            aside.classList.remove('aside--hover');
+            localStorage.removeItem('asideStatus', "asideMinimize");
+        }
+        else{
+            pageContant.classList.add('aside--extensive');
+            aside.classList.add('aside--minimize');
+            setTimeout(() => { aside.classList.add('aside--hover'); }, 200);
+            localStorage.setItem('asideStatus', "asideMinimize");
+        }
+    }
+
+    const hideAside = () => {
         header.classList.add('aside--hide');
         aside.classList.add('aside--hide');
          if(pageContant.classList.contains('aside--extensive')){
@@ -32,14 +45,16 @@ export const controlAside = () => {
             aside.classList.remove('aside--minimize');
             aside.classList.remove('aside--hover');
         }
+        localStorage.setItem('asideStatus', "asideHide");
     }
-    const showAside = () =>{
+    const showAside = () => {
         header.classList.remove('aside--hide');
         aside.classList.remove('aside--hide');
         if(aside.classList.contains('burger--active')){
             aside.classList.remove('burger--active');
             iconMenu.classList.remove('burger--active');
         }
+        localStorage.removeItem('asideStatus');
     }
 
     const addStyleResizeWindow = (sizeWindowWidth) => {
@@ -51,4 +66,12 @@ export const controlAside = () => {
             addStyleResizeWindow(window.innerWidth);
         }
     });
+
+    const getStatusAside = () => {
+        if((localStorage.getItem('asideStatus')) !== null){
+            localStorage.getItem('asideStatus') === 'asideMinimize' ? asideMinimize() : hideAside();
+        }
+    }
+
+    getStatusAside();
 }
