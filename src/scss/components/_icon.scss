@@ -13,6 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-double:before {
+  content: "\e90c";
+}
 .icon-help:before {
   content: "\e90b";
 }
