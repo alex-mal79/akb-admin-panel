@@ -35,9 +35,9 @@
 //=================================//
 // .aside
 .aside {
+    flex: 0 0 var(--size-aside-width);
     display: flex;
     flex-direction: column;
-    width: 280px;
     min-height: 100%;
     @include adaptive-value("padding", 10, 5, 1);
     background-color: var(--color-background-nav);
@@ -55,10 +55,14 @@
         .headar-aside__btn-resize{
             display: none;
         }
+        .nav-aside{
+            display: flex;
+            justify-content: center;
+        }
     }
     &.burger--active{
-        transform: translateX(0px);
         width: 280px;
+        transform: translateX(0px);
         padding: 10px;
         position: absolute;
         @media (max-width: $md4) {
@@ -83,11 +87,17 @@
             transform: scale(-1, 1);
             color: var(--color-dodger);
         }
-        .drop-nav-aside{
-            display: none;
+        .nav-aside{
+            display: flex;
+            justify-content: center;
         }
         .nav-aside__btn{
             justify-content: center;
+        }
+        .nav-aside__item{
+            &.drop--active{
+                flex: 1 1 auto;
+            }
         }
         .nav-aside__btn-txt,
         .nav-aside__btn-sec,
@@ -110,9 +120,6 @@
                 .headar-aside{
                     justify-content: space-between;
                     column-gap: 10px;
-                }
-                .drop-nav-aside{
-                    display: block;
                 }
                 .nav-aside__btn-txt,
                 .nav-aside__btn-sec,

@@ -27,13 +27,5 @@ export const dropDown = () => {
                 dropDownParent.classList.toggle('drop--active');
             });
         }
-        document.addEventListener("click", function(e){
-            if(!e.target.closest('[data-drop-mainBlock]')){
-                for(let i = 0; i < dropMenuButtons.length; i++){
-                    let dropMenuButton = dropMenuButtons[i];
-                    dropMenuButton.closest('[data-drop-parent]').classList.remove('drop--active');
-                }
-            }
-        });
     }
 }
