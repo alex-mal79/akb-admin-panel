@@ -57,7 +57,9 @@
         }
         .nav-main__btn-txt,
         .nav-main__btn-arrow,
-        .nav-service__link-text{
+        .nav-service__link-text,
+        .nav-service__link-sec,
+        .nav-service__link-arrow{
             display: none;
             font-size: 0;
         }
@@ -91,6 +93,14 @@
                 .nav-service__link-text{
                     display: flex;
                     font-size: 16px;
+                }
+                .nav-service__link-sec{
+                    display: flex;
+                    flex: 1 1 auto;
+                }
+                .nav-service__link-arrow{
+                    display: flex;
+                    font-size: 20px;
                 }
             }
         }
