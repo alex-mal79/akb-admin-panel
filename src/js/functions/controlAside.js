@@ -73,23 +73,4 @@ export const controlAside = () => {
         }
     }
     getStatusAside();
-
-    //===================//
-
-    const navBtns = Array.from(document.querySelectorAll('[data-nav-btn]'));
-        console.log(navBtns);
-
-    navBtns.forEach((navBtn) => {
-        navBtn.addEventListener("click", showItemsNav)
-        console.log(navBtn);
-
-    });
-
-    function showItemsNav(e){
-        e.preventDefault();
-        let currentNavBtn = e.target.closest('[data-nav-btnw]');
-        let currentNavBtn2 = e.currentTarget.nextElementSibling;
-        console.log(currentNavBtn);
-        console.log(currentNavBtn2);
-    }
 }
