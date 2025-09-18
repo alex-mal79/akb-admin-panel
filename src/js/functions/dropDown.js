@@ -11,11 +11,9 @@ export const dropDown = () => {
                 e.preventDefault();
                 let countParent = countDropParent(dropBtn);
 
-                if(countParent == 1){
+                // if(countParent == 1){
                     let i = 0;
                     while(i < dropBtns.length){
-                        console.log('i = ', i, 'dropBtns.length = ', dropBtns.length);
-
                         let dropBtn = dropBtns[i];
                         if(dropBtn.parentNode.closest('.drop--active')){
                             dropBtn.parentNode.classList.remove('drop--active');
@@ -29,33 +27,9 @@ export const dropDown = () => {
                     if(dropBtn.nextElementSibling !== null){
                         dropBtn.nextElementSibling.classList.add('drop--active');
                     }
-                }
-                // else{
-
-                // }
-
-                // if(dropBtn.parentNode.closest(".drop--active")){
-                //     console.log("parents = ", parents.length);
-
-                //     console.log("dropParent = ", dropParent);
-                //     console.log("dropBtnParent = ", dropBtn.parentNode);
                 // }
                 // else{
-                //     console.log("parents = ", parents.length);
 
-                //     console.log("dropParent = ", dropParent);
-                //     console.log("нет стиля drop--active");
-                // }
-
-                // for(let i = 0; i < dropBtns.length; i++){
-                //     let dropBtn = dropBtns[i];
-                //     if(dropBtnItem.parentNode.closest(".drop--active")){
-                //         console.log("dropBtnItemParentNode = ", dropBtn.parentNode);
-                //     }
-                // }
-
-                // for(let i = 0; i <= dropParents.length; i++){
-                //     console.log("i = ", i);
                 // }
 
                 // let dropParent = e.target.closest('[data-drop-parent]');
@@ -68,14 +42,6 @@ export const dropDown = () => {
                 // console.log("dropBlock = ", dropBlock);
                 // console.log("dropParentChildren = ", dropParentChildren);
                 // console.log("allParent = ", dropParents);
-
-                // let elementParentClosest = dropParent.parentNode.closest('[data-drop-parent]');
-                // if(elementParentClosest == null){
-                //     console.log("Нет родительского элемента ");
-                // }
-                // else{
-                //     console.log("test = ", elementParentClosest);
-                // }
             });
         });
         // Функция возврата количество радительских элементов с атрибутом data-drop-parent
@@ -87,6 +53,9 @@ export const dropDown = () => {
                 dropBtn = dropBtn.parentNode;
                 parents.push(dropBtn);
             }
+
+            console.log(parents);
+
 
             parents.forEach((parent) => {
                 if(parent.hasAttribute('data-drop-parent')){

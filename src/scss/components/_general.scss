@@ -1,12 +1,17 @@
 // .link-nav
-.link-nav {
+// .link-drop
+.link-nav,
+.link-drop {
     @media(any-hover: hover){
         &:hover{
             .link-nav__arrow,
-            .link-nav__icon{
+            .link-nav__icon,
+            .link-drop__arrow,
+            .link-drop__icon{
                 color: var(--color-dodger);
             }
-            .link-nav__text{
+            .link-nav__text,
+            .link-drop__text{
                 color: var(--color-white);
                 &::after{
                     width: 100%;
@@ -18,10 +23,12 @@
         }
     }
     // .link-nav__icon
+    // .link-drop__icon
     &__icon {
         transition: all 0.3s ease 0s;
     }
     // .link-nav__text
+    // .link-drop__text
     &__text {
         position: relative;
         transition: all 0.3s ease 0;
