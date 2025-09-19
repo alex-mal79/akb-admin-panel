@@ -3,3 +3,4 @@ node_modules/
 gulp-start/
 package-lock.json
 gulp/version.json
+version.json
