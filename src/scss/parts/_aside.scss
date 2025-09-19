@@ -127,10 +127,12 @@
                     display: flex;
                 }
                 .drop-nav-aside{
-                    height: auto;
-                    opacity: 1;
-                    visibility: visible;
-                    transition: height 0.3s ease 0s, opacity 0.3s ease 0s;
+                    &.drop--active{
+                        height: auto;
+                        opacity: 1;
+                        visibility: visible;
+                        transition: height 0.3s ease 0s, opacity 0.3s ease 0s;
+                    }
                 }
 
             }
@@ -229,111 +231,6 @@
         }
     }
 }
-//=================================//
-// .nav-aside
-// .nav-aside {
-//     display: flex;
-//     flex-direction: column;
-//     // .nav-aside__main
-//     &__main {
-//         flex: 1 1 auto;
-//     }
-//     // .nav-aside__list
-//     &__list {
-//     }
-//     // .nav-aside__item
-//     &__item {
-//         &:not(:last-child){
-//             @include adaptive-value("padding-bottom", 10, 5, 1);
-//         }
-//         &.drop--active{
-//             .nav-aside__btn{
-//                 color: var(--color-dodger);
-//                 @media(any-hover: hover){
-//                     &:hover{
-//                         color: var(--color-font);
-//                     }
-//                 }
-//             }
-//             .nav-aside__btn-arrow{
-//                 color: var(--color-dodger);
-//                 transform: rotate(180deg);
-//             }
-//             .drop-nav-aside__list{
-//                 height: auto;
-//                 padding-top: 10px;
-//                 opacity: 1;
-//                 visibility: visible;
-//             }
-//         }
-//     }
-//     // .nav-aside__btn
-//     &__btn {
-//         width: 100%;
-//         display: flex;
-//         align-items: center;
-//         @media(any-hover: hover){
-//             transition: all 0.3s ease 0;
-//             transform: scale(1);
-//             &:hover{
-//                 transform: scale(0.98);
-//                 color: var(--color-dodger);
-//             }
-//         }
-//     }
-//     // .nav-aside__btn-icon
-//     &__btn-icon {
-//         font-size: 32px;
-//     }
-//     // .nav-aside__btn-txt
-//     &__btn-txt {
-//         flex: 1 1 auto;
-//         display: flex;
-//         @include adaptive-value("padding-left", 10, 5, 1);
-//         padding-right: 5px;
-//         white-space: nowrap;
-//     }
-//     // .nav-aside__btn-arrow
-//     &__btn-arrow {
-//         transition: transform 0.3s ease 0s, color 0.3s ease 0s;
-//     }
-//     // .nav-aside__drop
-//     &__drop {
-//         padding-left: 30px;
-//     }
-//     // .nav-aside__service
-//     &__service {
-//     }
-// }
-// .drop-nav-aside
-// .drop-nav-aside {
-//     // .drop-nav-aside__list
-//     &__list {
-//         height: 0;
-//         opacity: 0;
-//         visibility: hidden;
-//         transition: height 0.3s ease 0s, opacity 0.3s ease 0s;
-//     }
-//     // .drop-nav-aside__item
-//     &__item {
-//         &:not(:last-child){
-//             padding-bottom: 5px;
-//         }
-//     }
-//     // .drop-nav-aside__link
-//     &__link {
-//     color: var(--color-font);
-//     }
-//     // .drop-nav-aside__link-icon
-//     &__link-icon {
-//         font-size: 24px;
-//     }
-//     // .drop-nav-aside__link-text
-//     &__link-text {
-//     }
-// }
-//=================================//
-
 // .nav-aside
 .nav-aside {
     // .nav-aside__items
@@ -420,18 +317,33 @@
 }
 // .sub-nav-aside
 .sub-nav-aside{
-    display: none;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: height 0.3s ease 0s, opacity 0.3s ease 0s;
     &.drop--active{
-        display: flex;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+    padding-top: 10px;
     }
-    // .sub-nav-aside__list
     &__list {
         flex: 1 1 auto;
         display: flex;
+        flex-direction: column;
     }
     // .sub-nav-aside__item
     &__item {
         width: 100%;
+        &:not(:last-child){
+            padding-bottom: 5px;
+        }
+        &.drop--active{
+            color: var(--color-dodger);
+            .sub-nav-aside__btn-arrow{
+                transform: rotate(180deg);
+            }
+        }
     }
     // .sub-nav-aside__btn
     &__btn {
@@ -472,6 +384,7 @@
     // .sub-nav-aside__btn-arrow
     &__btn-arrow {
         font-size: 18px;
+        transition: transform 0.3s ease 0s, color 0.3s ease 0s;
     }
     // .sub-nav-aside__drop
     &__drop {
@@ -479,32 +392,41 @@
     }
 }
 .drop-nav-aside {
-		// .drop-nav-aside__list
-		&__list {
-            padding-top: 10px;
-		}
-		// .drop-nav-aside__item
-		&__item {
-            &:not(:last-child){
-                padding-bottom: 5px;
-            }
-		}
-		// .drop-nav-aside__link
-		&__link {
-            display: flex;
-            align-items: center;
-            column-gap: 10px;
-            color: var(--color-font-nav);
-		}
-		// .drop-nav-aside__link-icon
-		&__link-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-		}
-		// .drop-nav-aside__link-text
-		&__link-text {
-            font-size: 15px;
-		}
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: height 0.3s ease 0s, opacity 0.3s ease 0s;
+    &.drop--active{
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+    // .drop-nav-aside__list
+    &__list {
+        padding-top: 10px;
+    }
+    // .drop-nav-aside__item
+    &__item {
+        &:not(:last-child){
+            padding-bottom: 5px;
+        }
+    }
+    // .drop-nav-aside__link
+    &__link {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        color: var(--color-font-nav);
+    }
+    // .drop-nav-aside__link-icon
+    &__link-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+    // .drop-nav-aside__link-text
+    &__link-text {
+        font-size: 15px;
+    }
 }

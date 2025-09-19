@@ -49,3 +49,22 @@
         opacity: 0;
     }
 }
+// .link--active
+.link--active{
+    .link-nav__arrow,
+    .link-nav__icon,
+    .link-drop__arrow,
+    .link-drop__icon{
+        color: var(--color-dodger);
+    }
+    .link-nav__text,
+    .link-drop__text{
+        color: var(--color-white);
+        &::after{
+            width: 100%;
+        }
+    }
+    .link-nav__arrow{
+        opacity: 1;
+    }
+}
