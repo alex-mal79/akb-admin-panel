@@ -2,38 +2,43 @@
 //Меню DropDown
 //================================================================
 export const dropDown = () => {
-    const dropMenuButtons = document.querySelectorAll('[data-drop-btn]');
-    const mediaQuery = window.matchMedia('(min-width: 768px)');
-    if(dropMenuButtons.length){
-        for(let i = 0; i < dropMenuButtons.length; i++){
-            let dropMenuButton = dropMenuButtons[i];
-            dropMenuButton.addEventListener("click", function(e){
-                let currentButton = e.currentTarget;
-                let dropDownParent = currentButton.closest('[data-drop-parent]');
 
-                function ScreenChange(e) {
-                    if (e.matches) {
-                        for(let i = 0; i < dropMenuButtons.length; i++){
-                            let dropMenuButton = dropMenuButtons[i];
-                            if(dropMenuButton !== currentButton){
-                                dropMenuButton.closest('[data-drop-parent]').classList.remove('drop--active');
-                            }
-                        }
-                    }
-                }
-                mediaQuery.addListener(ScreenChange);
-                ScreenChange(mediaQuery);
+    const navBtns = Array.from(document.querySelectorAll('[data-nav-btn]'));
+    const dropBtns = Array.from(document.querySelectorAll('[data-drop-btn]'));
 
-                dropDownParent.classList.toggle('drop--active');
+    if(dropBtns.length > 0){
+        dropBtns.forEach((dropBtn) => {
+            dropBtn.addEventListener("click", function(e){
+                e.preventDefault();
+                showItem(dropBtns, dropBtn);
             });
-        }
-        document.addEventListener("click", function(e){
-            if(!e.target.closest('[data-drop-mainBlock]')){
-                for(let i = 0; i < dropMenuButtons.length; i++){
-                    let dropMenuButton = dropMenuButtons[i];
-                    dropMenuButton.closest('[data-drop-parent]').classList.remove('drop--active');
-                }
-            }
         });
+    }
+
+    if(navBtns.length > 0){
+        navBtns.forEach((navBtn) => {
+            navBtn.addEventListener("click", function(e){
+                e.preventDefault();
+                showItem(navBtns, navBtn);
+            });
+        });
+    }
+
+    const showItem = (clickBtns, clickBtn) => {
+        let i = 0;
+        while(i < clickBtns.length){
+            let clickBtn = clickBtns[i];
+            if(clickBtn.parentNode.closest('.drop--active')){
+                clickBtn.parentNode.classList.remove('drop--active');
+            }
+            if(clickBtn.nextElementSibling !== null){
+                    clickBtn.nextElementSibling.classList.remove('drop--active');
+            }
+            i++;
+        }
+        clickBtn.parentNode.classList.add('drop--active');
+        if(clickBtn.nextElementSibling !== null){
+            clickBtn.nextElementSibling.classList.add('drop--active');
+        }
     }
 }

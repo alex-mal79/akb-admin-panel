@@ -1,5 +1,94 @@
-        <aside class="aside">
-            <div class="aside__header">aside-header</div>
-            <div class="aside__main">aside-main</div>
+        <aside class="aside" data-menu-body>
+
+            <div class="aside__header headar-aside">
+                <div class="headar-aside__logo">
+                    <a href="/"  class="headar-aside__link">AKB Admin Panel</a>
+                </div>
+                <div class="headar-aside__control">
+                    <button class="headar-aside__btn-resize btn-reset" title="Свернуть боковую панель" data-btn-nav-resize>
+                        <span class="headar-aside__icon-left icon-arrow-left"></span>
+                    </button>
+                    <button class="headar-aside__btn-hide btn-reset" title="Убрать боковую панель" data-btn-nav-hide>
+                        <span class="headar-aside__icon-cor icon-arrow-right"></span>
+                    </button>
+                </div>
+            </div>
+
+            <nav class="aside__nav nav-aside">
+                <ul class="nav-aside__items" data-nav-parent>
+                    <li class="nav-aside__item nav-aside__item--main drop--active">
+                        <button class="nav-aside__btn link-nav btn-reset" data-nav-btn>
+                            <span class="nav-aside__btn-icon link-nav__icon icon-office-business"></span>
+                            <span class="nav-aside__btn-txt link-nav__text">Главное меню</span>
+                            <span class="nav-aside__btn-sec"></span>
+                            <span class="nav-aside__btn-arrow link-nav__arrow icon-arrow-double"></span>
+                        </button>
+                        <div class="nav-aside__sub-nav-aside sub-nav-aside drop--active">
+                            <ul class="sub-nav-aside__list" data-drop-parent>
+                                <li class="sub-nav-aside__item">
+                                    <button class="sub-nav-aside__btn btn-reset" data-drop-btn>
+                                        <span class="sub-nav-aside__btn-icon icon-office-business"></span>
+                                        <span class="sub-nav-aside__btn-txt">Структурные единицы</span>
+                                        <span class="sub-nav-aside__btn-arrow icon-arrow-bottom"></span>
+                                    </button>
+                                    <div class="sub-nav-aside__drop drop-nav-aside">
+                                        <ul class="drop-nav-aside__list">
+                                            <li class="drop-nav-aside__item">
+                                                <a href="##" class="drop-nav-aside__link link-drop">
+                                                    <span class="drop-nav-aside__link-icon link-drop__icon icon-kick-out"></span>
+                                                    <span class="drop-nav-aside__link-text link-drop__text">Офисы</span>
+                                                </a>
+                                            </li>
+                                            <li class="drop-nav-aside__item">
+                                                <a href="##" class="drop-nav-aside__link link-drop">
+                                                    <span class="drop-nav-aside__link-icon link-drop__icon icon-warehouse"></span>
+                                                    <span class="drop-nav-aside__link-text link-drop__text">Склады</span>
+                                                </a>
+                                            </li>
+                                            <li class="drop-nav-aside__item">
+                                                <a href="./test.html" class="drop-nav-aside__link link-drop">
+                                                    <span class="drop-nav-aside__link-icon link-drop__icon icon-shop"></span>
+                                                    <span class="drop-nav-aside__link-text link-drop__text">Магазины</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-aside__item">
+                        <button class="nav-aside__btn link-nav btn-reset" data-nav-btn>
+                            <span class="nav-aside__btn-icon link-nav__icon  icon-help"></span>
+                            <span class="nav-aside__btn-txt link-nav__text">Справка</span>
+                            <span class="nav-aside__btn-sec"></span>
+                            <span class="nav-aside__btn-arrow link-nav__arrow icon-arrow-double"></span>
+                        </button>
+                    </li>
+
+                    <li class="nav-aside__item">
+                        <button class="nav-aside__btn link-nav btn-reset" data-nav-btn>
+                            <span class="nav-aside__btn-icon link-nav__icon  icon-settings"></span>
+                            <span class="nav-aside__btn-txt link-nav__text">Настройки</span>
+                            <span class="nav-aside__btn-sec"></span>
+                            <span class="nav-aside__btn-arrow link-nav__arrow icon-arrow-double"></span>
+                        </button>
+                    </li>
+
+                    <li class="nav-aside__item">
+                        <button class="nav-aside__btn link-nav btn-reset" data-nav-btn>
+                            <span class="nav-aside__btn-icon link-nav__icon  icon-setting"></span>
+                            <span class="nav-aside__btn-txt link-nav__text">Администрирование</span>
+                            <span class="nav-aside__btn-sec"></span>
+                            <span class="nav-aside__btn-arrow link-nav__arrow icon-arrow-double"></span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
             <div class="aside__footer">aside-footer</div>
         </aside>
+
+
+
