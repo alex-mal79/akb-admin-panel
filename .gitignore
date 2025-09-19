@@ -1,4 +1,5 @@
+akb-admin-panel/
 node_modules/
 gulp-start/
 package-lock.json
-akb-admin-panel/
+version.json
