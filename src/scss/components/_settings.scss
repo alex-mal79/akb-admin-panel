@@ -7,23 +7,23 @@ body {
         overflow: hidden;
     }
 }
-
+// html
 html {
     font-family: var(--font-montserrat, sans-serif);
 }
-
+// body
 body {
     min-width: 320px;
     font-size: 14px;
 }
-
+// .wrapper
 .wrapper{
     display: flex;
     flex-direction: row;
     min-height: 100%;
     overflow: hidden;
 }
-
+// .contant
 .contant{
     flex: 1 1 auto;
     display: flex;
@@ -34,12 +34,29 @@ body {
         padding-left: 80px;
     }
 }
-
+// .main
 .main{
     flex: 1 1 auto;
     display: flex;
     width: 100%;
     padding: 5px 0px;
+    // .main__work
+    // .main__detail
+    &__work,
+    &__detail {
+        display: flex;
+        border: 1px solid var(--color-border);
+        background-color: var(--color-background-blok);
+        border-radius: 10px;
+        padding: 10px;
+        overflow-y: hidden;
+    }
+    // .main__work
+    &__work {
+    }
+    // .main__detail
+    &__detail {
+    }
 }
 //=======================================================
 //      Ограничивающий контейнер

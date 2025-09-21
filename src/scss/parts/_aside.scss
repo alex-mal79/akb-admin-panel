@@ -8,6 +8,7 @@
     background-color: var(--color-background-nav);
     color: var(--color-font-nav);
     transition: all 0.3s ease 0s;
+    z-index: 50;
     &.aside--hide{
         transform: translateX(-500px);
         position: absolute;
@@ -95,7 +96,7 @@
                     width: auto;
                     height: auto;
                     opacity: 1;
-                    transition: opacity 0.1s ease-in 0.1s;
+                    transition: all 0.1s ease-in 0.1s;
                 }
                 .headar-aside{
                     justify-content: space-between;
