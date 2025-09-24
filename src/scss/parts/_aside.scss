@@ -175,7 +175,7 @@
     &__link {
         display: block;
         color: var(--color-font);
-        transition: all 0.3s ease 0;
+        transition: all 0.3s ease 0s;
         font-size: 18px;
         white-space: nowrap;
         transform: scale(1);
@@ -356,7 +356,7 @@
         column-gap: 5px;
         width: 100%;
         @media(any-hover: hover){
-            transition: all 0.3s ease 0;
+            transition: all 0.3s ease 0s;
             transform: scale(1);
             &:hover{
                 transform: scale(0.98);
@@ -375,6 +375,7 @@
     // .sub-nav-aside__btn-icon
     &__btn-icon {
         font-size: 26px;
+        transition: all 0.3s ease 0s;
     }
     // .sub-nav-aside__btn-txt
     &__btn-txt {
@@ -383,7 +384,7 @@
         opacity: 1;
         font-size: 16px;
         white-space: nowrap;
-        transition: all 0.3s ease 0;
+        transition: all 0.3s ease 0s;
 
     }
     // .sub-nav-aside__btn-arrow

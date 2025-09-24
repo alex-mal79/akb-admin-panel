@@ -11,13 +11,13 @@ export const controlAside = () => {
     const pageContant  = document.querySelector('[data-page-contant]');
 
     if(btnNavHide){
-        btnNavHide.addEventListener("click", function(e){
+        btnNavHide.addEventListener("click", function(){
         aside.classList.contains('burger--active') ? showAside() : hideAside();
         });
     }
 
     if(btnNavResize){
-        btnNavResize.addEventListener("click", function(e){
+        btnNavResize.addEventListener("click", function(){
             asideMinimize();
         });
     }
